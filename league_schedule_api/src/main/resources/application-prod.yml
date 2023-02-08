@@ -1,0 +1,52 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        - prod
+  application:
+    name: LoLjoa-Server
+
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+#  cache:
+#    type: redis
+#  redis:
+#    host: localhost
+#    port: 6379
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      base-path: /api/league/actuator
+      exposure:
+        include: health, beans, prometheus, metrics
+
+cloud:
+  aws:
+    credentials:
+      accessKey: ${ACCESS_KEY_ID}
+      secretKey: ${SECRET_ACCESS_KEY}
+    s3:
+      bucket: ${S3_BUCKET_NAME}
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false

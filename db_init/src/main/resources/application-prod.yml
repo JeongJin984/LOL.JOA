@@ -1,0 +1,36 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        - prod
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+management:
+  endpoints:
+    web:
+      base-path: /init/db/actuator
+      exposure:
+        include: health, beans, prometheus, metrics
+
+cloud:
+  aws:
+    credentials:
+      accessKey: ${ACCESS_KEY_ID}
+      secretKey: ${SECRET_ACCESS_KEY}
+    s3:
+      bucket: ${S3_BUCKET_NAME}
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false

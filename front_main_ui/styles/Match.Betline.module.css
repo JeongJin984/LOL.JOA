@@ -1,0 +1,114 @@
+.betlineWide {
+    display: flex;
+    justify-content: center;
+    margin: 2px 200px 3px 200px;
+    min-height: 40px;
+    font-size: 12px;
+}
+
+.tournament {
+    display: flex;
+    align-items: center;
+    flex: 1 12%;
+    color: #42E0E4;
+    background-color: #20253d;
+    padding-left: 15px;
+    font-size: 10px;
+}
+
+.betlineDate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 12%;
+    text-align: right;
+    color: #fff;
+    background-color: #20253d;
+    padding-right: 15px;
+}
+
+.matchup {
+    z-index: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex: 1 1 540px;
+    max-width: 50%;
+    background-color: #20253d;
+}
+
+.leftMatch {
+    display: flex;
+    flex: 1 1 47.5%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+    color: #fff;
+    background-color: #384360;
+    border: 0;
+    outline: 0;
+}
+
+.leftMatch:hover {
+    background-color: #566796;
+}
+
+.leftMatch:active {
+    background-color: #6a7698;
+}
+
+.leftMatch:visited {
+    background-color: #f75a00;
+}
+
+.leftTeam {
+    display: flex;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.leftOdds {
+    display: flex;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.middle {
+    display: flex;
+    color: #566796;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    max-width: 5%;
+}
+
+.rightMatch {
+    display: flex;
+    flex: 1 1 47.5%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%);
+    color: #fff;
+    background-color: #384360;
+    border: 0;
+    outline: 0;
+}
+
+.rightMatch:hover {
+    background-color: #566796;
+}
+
+.rightOdds {
+    display: flex;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.rightTeam {
+    display: flex;
+    padding-right: 10px;
+    font-size: 15px;
+}

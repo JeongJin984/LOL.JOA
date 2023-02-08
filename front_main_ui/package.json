@@ -1,0 +1,31 @@
+{
+  "name": "loljoa_front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cross-env": "^7.0.3",
+    "immer": "^9.0.12",
+    "next": "12.1.4",
+    "next-redux-wrapper": "^7.0.5",
+    "react": "18.0.0",
+    "react-cookie": "^4.1.1",
+    "react-dom": "18.0.0",
+    "react-redux": "^7.2.8",
+    "redux": "^4.1.2",
+    "redux-saga": "^1.1.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.4",
+    "redux-devtools-extension": "^2.13.9"
+  }
+}

@@ -1,0 +1,2 @@
+export const backURL = process.env.NODE_ENV === "development" ? "http://a4a7f11fa68b841be93094fafb797151-1598871904.ap-northeast-2.elb.amazonaws.com"
+  : "http://a4a7f11fa68b841be93094fafb797151-1598871904.ap-northeast-2.elb.amazonaws.com";

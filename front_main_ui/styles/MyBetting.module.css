@@ -1,0 +1,65 @@
+.bettingWide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5px;
+  border: solid;
+  background: linear-gradient(0.25turn, #20253d, #35708b);
+  min-height: 40px;
+  font-size: 12px;
+}
+
+.matchData {
+  display: flex;
+  color: #42E0E4;
+  margin: 5px;
+}
+
+.predictWide {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.choice {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.logo {
+  display: flex;
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+}
+
+.odds {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 20px;
+  margin-right: 5px;
+  color: #F6BE23;
+}
+
+.pintWide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #131624;
+}
+
+.bettingPoint {
+  display: flex;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.rewardPoint {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 10px;
+}

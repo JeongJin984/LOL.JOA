@@ -1,0 +1,46 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        - prod
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      base-path: /api/account/actuator
+      exposure:
+        include: health, beans, metrics
+
+cloud:
+  aws:
+    credentials:
+      accessKey: ${ACCESS_KEY_ID}
+      secretKey: ${SECRET_ACCESS_KEY}
+    s3:
+      bucket: ${S3_BUCKET_NAME}
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+back:
+  url:
+    lck-schedule-api: "http://a4a7f11fa68b841be93094fafb797151-1598871904.ap-northeast-2.elb.amazonaws.com"
+    db-init-api: "http://a4a7f11fa68b841be93094fafb797151-1598871904.ap-northeast-2.elb.amazonaws.com"
+    betting-game-api: "http://a4a7f11fa68b841be93094fafb797151-1598871904.ap-northeast-2.elb.amazonaws.com"
